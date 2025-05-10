@@ -4,6 +4,7 @@
 
 class GameArt
   def initialize
+    @stage = [0, 1, 2, 3, 4, 5, 6]
   end
 
   HANGMAN_STAGES = [
@@ -27,8 +28,11 @@ class GameArt
 
     # Stage 6 (Complete - Game Over)
     "  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n========="
-  ]
+  ].freeze
 
-  def display_hangman(stage)
+  def display_stage(stage)
+    stage_index = [stage.to_i, HANGMAN_STAGES.length - 1].min
+    # The last valid index will always be length - 1. We use min to establish an upper limit.
+    # This prevents us from going out of bounds.
   end
 end
