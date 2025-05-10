@@ -32,7 +32,9 @@ class GameArt
 
   def display_stage(stage)
     stage_index = [stage.to_i, HANGMAN_STAGES.length - 1].min
-    # The last valid index will always be length - 1. We use min to establish an upper limit.
-    # This prevents us from going out of bounds.
+    # The last valid index will always be length - 1. We use min to establish an upper limit by always selecting the lesser value of the two possibilities.
+    # This prevents us from going out of bounds by selecting a stage or capping the stage at the last index.
+    current_stage = HANGMAN_STAGES[stage_index]
+    puts current_stage
   end
 end
