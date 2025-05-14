@@ -4,4 +4,13 @@
 module ChooseWord
   def self.random_word(min_length = 5, max_length = 12)
     file_path = File.join(File.dirname(__FILE__), 'words.txt')
+
+    valid_words = File.readlines(file_path)
+                      .map(&:strip)
+                      .map(&:upcase)
+                      .select { |word| word.length.between?(min_length, max_length) }
+
+    # Return a random word from the valid words
+    valid_words.sample
+  end
 end

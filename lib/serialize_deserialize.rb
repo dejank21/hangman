@@ -4,7 +4,7 @@
 module SerializeDeserialize
   module_function
 
-  # This method serilaizes the data into a specified format.
+  # This method serilaizes the data into a specified format, default being JSON.
   def serialize(data, format = :json)
     case format
     when :json
@@ -20,6 +20,7 @@ module SerializeDeserialize
     raise SerializationError, "Failed to serialize data: #{e.message}"
   end
 
+  # This method deserializes the data from the specified format.
   def deserialize(string, format = :json)
     case format
     when :json
