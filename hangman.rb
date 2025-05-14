@@ -138,6 +138,10 @@ def play_game(game, save_file)
     when :quit
       handle_quit(save_file, game)
     when Array
+      # This handles an array with both action[0] and action[1] were 0 = :guess and 1 = letter
+      # It first confirms that it's a letter guess then passes the letter via the second array value
+      # to the guess_letter method.
+      # A type of tagged union? Need to look into this.
       if action[0] == :guess
         result = game.guess_letter(action[1])
         handle_guess_result(result, action[1], game.word)
