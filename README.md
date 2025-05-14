@@ -1,7 +1,7 @@
 # Ruby Hangman Game
 
 ## Features
-- Random word selection
+- Random word selection from list of 10,000 words
 - Save/load functionality
 - ASCII art visuals
 
@@ -9,4 +9,3 @@
 1. Clone the repository
 2. Ensure Ruby is installed
 3. Run `ruby hangman.rb` 
-4. [Include gameplay instructions]
