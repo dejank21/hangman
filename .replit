@@ -1,1 +1,0 @@
-run = "/nix/store/*/bin/ruby hangman.rb"
