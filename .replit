@@ -1,2 +1,1 @@
-run = "bundle install && ruby hangman.rb"
-language = "ruby"
+run = "/nix/store/*/bin/ruby hangman.rb"
