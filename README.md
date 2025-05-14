@@ -1,5 +1,12 @@
-This project is a Hangman game inspiried by The Odin Project, it includes a save feature and has a library of around 10,000 words that it can pull from. 
+# Ruby Hangman Game
 
-A max of one game may be saved at a time to limit complexity for this project.
+## Features
+- Random word selection
+- Save/load functionality
+- ASCII art visuals
 
-All saved games will be stored in the saved_games folder with JSON being the default serialized format.
+## How to Play
+1. Clone the repository
+2. Ensure Ruby is installed
+3. Run `ruby hangman.rb` 
+4. [Include gameplay instructions]
