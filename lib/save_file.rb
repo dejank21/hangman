@@ -7,8 +7,14 @@ require_relative 'serialize_deserialize'
 class SaveFile
   SAVE_FILENAME = 'hangman_save.json'
 
-  def initialize(format = :json)
+  def initialize(save_dir = nil, format = :json)
     @format = format
+    @save_dir = save_dir || '.'
+    Dir.mkdir(@save_dir) unless Dir.exist?(@save_dir)
+  end
+
+  def save_path
+    File.join(@save_dir, SAVE_FILENAME)
   end
 
   def save_game(word, guessed_letters, incorrect_guesses)
