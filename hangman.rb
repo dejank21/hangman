@@ -82,12 +82,12 @@ end
 def get_player_action
   # This method prompts the user to input Save, Quit/Exit or input a letter.
   DisplayMessages.prompt_for_action
-  input = gets.chomp.downcase
+  input = gets.chomp.upcase
 
   case input
-  when 'save'
+  when 'SAVE'
     :save
-  when 'quit', 'exit'
+  when 'QUIT', 'EXIT'
     :quit
   when /^[A-Z]$/
     [:guess, input]
